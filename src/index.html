@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="cardDrawApp">
   <head>
     <meta charset="utf-8">
     <title>Card Draw</title>
@@ -10,8 +10,16 @@
   </head>
   <body ng-cloak>
     <!-- sample angular code -->
-    <div class="container">
-      <h2>Card Draw</h2>
+    <div class="container" ng-controller="mainController as mainCtrl">
+      <h2 class="center-align">Card Draw</h2>
+      <div class="row">
+        <div class="col s6 m6 center-align">
+          <cd-hand></cd-hand>
+        </div>
+        <div class="col s6 m6 center-align">
+          <deck></deck>
+        </div>
+      </div>
     </div>
     <!-- scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -21,5 +29,9 @@
     <script type="text/javascript" src="js/config.js"></script>
     <!-- main component -->
     <script type="text/javascript" src="js/components/main/main.controller.js"></script>
+    <script type="text/javascript" src="js/components/hand/hand.config.js"></script>
+    <script type="text/javascript" src="js/components/hand/hand.directive.js"></script>
+    <script type="text/javascript" src="js/components/hand/hand.service.js"></script>
+    <script type="text/javascript" src="js/components/hand/hand.controller.js"></script>
   </body>
 </html>
